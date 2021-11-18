@@ -1,9 +1,11 @@
 package org.project;
 
-public class MassiveSort {
+// Write a program that sorts an array from minimum to maximum
+
+public class arraySort {
 
     public static void main(String[] args) {
-
+        System.out.println("SELECT SORT");                       //SELECTION SORT
         int [] arr = new int[10];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int)(Math.random()*100);
@@ -29,46 +31,21 @@ public class MassiveSort {
 
             System.out.println(arr[i]);
         }
-
-
         System.out.println("");
-
-//        BUBBLE SORT
+                                                                 //BUBBLE SORT
         System.out.println("BUBBLE SORT");
 
-        for ( int i = arr.length-1 ; i > 0 ; i--) {
+        for ( int i = arr.length-1 ; i >= 0 ; i--) {
 
-            int changeIndex;
-
-            for ( int j = 0; j < i; j++) {
+            for (int j = 0; j < i; j++) {
 
                 if (arr[j] < arr [j + 1]) {
-                    changeIndex = arr[j];
+                    int swap = arr[j];
                     arr[j] = arr [j + 1];
-                    arr[j + 1] = changeIndex;
+                    arr[j + 1] = swap;
                 }
             }
-
             System.out.println(arr[i]);
         }
-
-//        System.out.println("Цикл While");
-//        boolean isSorted = false;
-//
-//        int changeIndex;
-//
-//        while(!isSorted) {
-//            isSorted = true;
-//            for (int i = 0; i < arr.length-1; i++) {
-//                if(arr[i] > arr[i+1]){
-//                    isSorted = false;
-//                    changeIndex = arr[i];
-//                    arr[i] = arr[i+1];
-//                    arr[i+1] = changeIndex;
-//                }
-//
-//                System.out.println(arr[i]);
-//            }
-//        }
     }
 }
